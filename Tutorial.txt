@@ -1,0 +1,2 @@
+Cách 1: QLSV/dist/QLSV.exe
+Cách 2: Mở terminal với đường dẫn đến thư mục dist, chạy lệnh "java -jar QLSV.jar"
