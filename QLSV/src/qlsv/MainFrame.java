@@ -11,7 +11,6 @@ import javax.swing.table.DefaultTableModel;
  * @author NVK
  */
 public class MainFrame extends javax.swing.JFrame {
-
     /**
      * Creates new form MainFrame
      */
@@ -19,7 +18,7 @@ public class MainFrame extends javax.swing.JFrame {
     {
         try
         {
-            String url = "jdbc:sqlserver://DESKTOP-4M0UOG9:1433;databaseName=QLSV;encrypt=true;trustServerCertificate=true";
+            String url = "jdbc:sqlserver://DESKTOP-4M0UOG9:1436;databaseName=QLSV;encrypt=true;trustServerCertificate=true";
             String user = "sa";
             String password = "123";
             Connection conn = DriverManager.getConnection(url, user, password);
@@ -365,7 +364,7 @@ public class MainFrame extends javax.swing.JFrame {
     private void addDataToDatabase(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addDataToDatabase
                                
     try {
-        String url = "jdbc:sqlserver://DESKTOP-4M0UOG9:1433;databaseName=QLSV;encrypt=true;trustServerCertificate=true";
+        String url = "jdbc:sqlserver://DESKTOP-4M0UOG9:1436;databaseName=QLSV;encrypt=true;trustServerCertificate=true";
         String user = "sa";
         String password = "123";
         Connection conn = DriverManager.getConnection(url, user, password);
@@ -398,7 +397,7 @@ public class MainFrame extends javax.swing.JFrame {
         String _tempID = txtID.getText();
         if(row >= 0){
             try{
-                String url = "jdbc:sqlserver://DESKTOP-4M0UOG9:1433;databaseName=QLSV;encrypt=true;trustServerCertificate=true";
+                String url = "jdbc:sqlserver://DESKTOP-4M0UOG9:1436;databaseName=QLSV;encrypt=true;trustServerCertificate=true";
                 String user = "sa";
                 String password = "123";
                 Connection conn = DriverManager.getConnection(url, user, password);
@@ -431,7 +430,7 @@ public class MainFrame extends javax.swing.JFrame {
         
         if(row >= 0){
             try{
-                String url = "jdbc:sqlserver://DESKTOP-4M0UOG9:1433;dataBaseName=QLSV;encrypt=true;trustServerCertificate=true";
+                String url = "jdbc:sqlserver://DESKTOP-4M0UOG9:1436;dataBaseName=QLSV;encrypt=true;trustServerCertificate=true";
                 String user = "sa";
                 String password = "123";
                 Connection conn = DriverManager.getConnection(url, user, password);
@@ -462,8 +461,11 @@ public class MainFrame extends javax.swing.JFrame {
 
     private void findDataWithID(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_findDataWithID
         // TODO add your handling code here:
+        if(txtFindID.getText().isEmpty()){
+            return;
+        }
         try{
-            String url = "jdbc:sqlserver://DESKTOP-4M0UOG9:1433;databaseName=QLSV;encrypt=true;trustServerCertificate=true";
+            String url = "jdbc:sqlserver://DESKTOP-4M0UOG9:1436;databaseName=QLSV;encrypt=true;trustServerCertificate=true";
             String user = "sa";
             String password = "123";
             Connection conn = DriverManager.getConnection(url, user, password);
@@ -505,7 +507,7 @@ public class MainFrame extends javax.swing.JFrame {
         // TODO add your handling code here:
         // TODO add your handling code here:
         try{
-            String url = "jdbc:sqlserver://DESKTOP-4M0UOG9:1433;databaseName=QLSV;encrypt=true;trustServerCertificate=true";
+            String url = "jdbc:sqlserver://DESKTOP-4M0UOG9:1436;databaseName=QLSV;encrypt=true;trustServerCertificate=true";
             String user = "sa";
             String password = "123";
             Connection conn = DriverManager.getConnection(url, user, password);
@@ -547,7 +549,7 @@ public class MainFrame extends javax.swing.JFrame {
         // TODO add your handling code here:
         // TODO add your handling code here:
         try{
-            String url = "jdbc:sqlserver://DESKTOP-4M0UOG9:1433;databaseName=QLSV;encrypt=true;trustServerCertificate=true";
+            String url = "jdbc:sqlserver://DESKTOP-4M0UOG9:1436;databaseName=QLSV;encrypt=true;trustServerCertificate=true";
             String user = "sa";
             String password = "123";
             Connection conn = DriverManager.getConnection(url, user, password);
