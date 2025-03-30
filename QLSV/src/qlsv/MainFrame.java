@@ -14,13 +14,13 @@ public class MainFrame extends javax.swing.JFrame {
     /**
      * Creates new form MainFrame
      */
+    String url = "jdbc:sqlserver://192.168.1.10:1436;databaseName=QLSV;encrypt=true;trustServerCertificate=true";
+    String user = "userQLSV";
+    String password = "userisgay";
     public void loadDataFromDatabase()
     {
         try
         {
-            String url = "jdbc:sqlserver://DESKTOP-4M0UOG9:1436;databaseName=QLSV;encrypt=true;trustServerCertificate=true";
-            String user = "sa";
-            String password = "123";
             Connection conn = DriverManager.getConnection(url, user, password);
             Statement stmt = conn.createStatement();
             ResultSet rs = stmt.executeQuery("Select * from dbo.sinhvien");
@@ -364,9 +364,6 @@ public class MainFrame extends javax.swing.JFrame {
     private void addDataToDatabase(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addDataToDatabase
                                
     try {
-        String url = "jdbc:sqlserver://DESKTOP-4M0UOG9:1436;databaseName=QLSV;encrypt=true;trustServerCertificate=true";
-        String user = "sa";
-        String password = "123";
         Connection conn = DriverManager.getConnection(url, user, password);
 
         // Câu lệnh INSERT dùng PreparedStatement để tránh lỗi SQL Injection
@@ -397,9 +394,6 @@ public class MainFrame extends javax.swing.JFrame {
         String _tempID = txtID.getText();
         if(row >= 0){
             try{
-                String url = "jdbc:sqlserver://DESKTOP-4M0UOG9:1436;databaseName=QLSV;encrypt=true;trustServerCertificate=true";
-                String user = "sa";
-                String password = "123";
                 Connection conn = DriverManager.getConnection(url, user, password);
                 String query = "Update dbo.sinhvien set ID = ?, Name = ?, Age = ?, Phone = ?, Email = ? where ID = ?";
                 
@@ -430,9 +424,6 @@ public class MainFrame extends javax.swing.JFrame {
         
         if(row >= 0){
             try{
-                String url = "jdbc:sqlserver://DESKTOP-4M0UOG9:1436;dataBaseName=QLSV;encrypt=true;trustServerCertificate=true";
-                String user = "sa";
-                String password = "123";
                 Connection conn = DriverManager.getConnection(url, user, password);
                 
                 String query = "Delete from dbo.sinhvien where id = ?";
@@ -465,9 +456,6 @@ public class MainFrame extends javax.swing.JFrame {
             return;
         }
         try{
-            String url = "jdbc:sqlserver://DESKTOP-4M0UOG9:1436;databaseName=QLSV;encrypt=true;trustServerCertificate=true";
-            String user = "sa";
-            String password = "123";
             Connection conn = DriverManager.getConnection(url, user, password);
             Statement stmt = conn.createStatement();
             
@@ -507,9 +495,6 @@ public class MainFrame extends javax.swing.JFrame {
         // TODO add your handling code here:
         // TODO add your handling code here:
         try{
-            String url = "jdbc:sqlserver://DESKTOP-4M0UOG9:1436;databaseName=QLSV;encrypt=true;trustServerCertificate=true";
-            String user = "sa";
-            String password = "123";
             Connection conn = DriverManager.getConnection(url, user, password);
             Statement stmt = conn.createStatement();
             
@@ -549,9 +534,6 @@ public class MainFrame extends javax.swing.JFrame {
         // TODO add your handling code here:
         // TODO add your handling code here:
         try{
-            String url = "jdbc:sqlserver://DESKTOP-4M0UOG9:1436;databaseName=QLSV;encrypt=true;trustServerCertificate=true";
-            String user = "sa";
-            String password = "123";
             Connection conn = DriverManager.getConnection(url, user, password);
             Statement stmt = conn.createStatement();
             
